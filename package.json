@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ankit98040/Notes-app/issues"
   },
-  "homepage": "https://github.com/ankit98040/Notes-app#readme"
+  "homepage": "https://github.com/ankit98040/Notes-app#readme",
+  "dependencies": {
+    "yargs": "^16.0.3"
+  }
 }
