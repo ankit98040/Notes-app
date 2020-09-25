@@ -45,8 +45,15 @@ yargs.command({
 yargs.command({
     command: 'read',
     describe: 'reading note',
-    handler() {
-        console.log('Ankit reads a note')
+    builder: {
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler(argv) {
+        notes.readNote(argv.title)
     }
 })
 
@@ -54,7 +61,7 @@ yargs.command({
     command: 'list',
     describe: 'listing  note',
     handler() {
-        console.log('Ankit listss all note')
+        notes.listNotes()
     }
 })
 
