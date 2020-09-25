@@ -20,7 +20,7 @@ yargs.command({
             type:'string'
         }
     },
-    handler: function () {
+    handler() {
         notes.addNote(argv.title, argv.body)
     }
 })
@@ -37,7 +37,7 @@ yargs.command({
             }
         }
     },
-    handler: function (argv) {
+    handler(argv) {
         notes.removeNote(argv.title)
     }
 })
@@ -45,7 +45,7 @@ yargs.command({
 yargs.command({
     command: 'read',
     describe: 'reading note',
-    handler: function () {
+    handler() {
         console.log('Ankit reads a note')
     }
 })
@@ -53,7 +53,7 @@ yargs.command({
 yargs.command({
     command: 'list',
     describe: 'listing  note',
-    handler: function () {
+    handler() {
         console.log('Ankit listss all note')
     }
 })
