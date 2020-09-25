@@ -30,13 +30,15 @@ yargs.command({
     describe: 'removing a note',
     builder: {
         title: {
-            describe:'note title',
-            demandOption: true,
-            type: 'string'
+            title: {
+                describe: 'Note title',
+                demandOption: true,
+                type: 'string'
+            }
         }
     },
     handler: function (argv) {
-        console.log('Ankit removes a note', argv)
+        notes.removeNote(argv.title)
     }
 })
 
